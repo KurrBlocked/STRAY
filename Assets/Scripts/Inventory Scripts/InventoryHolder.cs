@@ -1,20 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Events;
-
-[System.Serializable]
-public class InventoryHolder : MonoBehaviour
-{
-    [SerializeField] private int inventorySize;
-    [SerializeField] protected InventorySystem inventorySystem;
-
-    public InventorySystem InventorySystem => inventorySystem;
-
-    public static UnityAction<InventorySystem> OnDynamicInventoryDisplayRequested;
-
-    private void Awake()
-    {
-        inventorySystem = new InventorySystem(inventorySize);   
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:06ee66465eb3f2e3896b49e8b38e0e72c08a98b2038fee8830718310e43b4221
+size 540

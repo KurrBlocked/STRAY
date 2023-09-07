@@ -1,27 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class StartingZone : MonoBehaviour
-{
-    private Collider collider;
-    private PlayerController player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        collider= GetComponent<Collider>();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        player = other.GetComponent<PlayerController>();
-        if (player != null)
-        {
-            if (player.PowerBanks >= 4)
-            {
-                player.win = true;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:1dbcf5a32b9e2f416bc6091b5106a27fb38c06727774854bec7132db5d58fa10
+size 590

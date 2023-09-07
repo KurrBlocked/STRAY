@@ -1,33 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class StaticInventoryDisplay : InventoryDisplay
-{
-    [SerializeField] private InventoryHolder inventoryHolder;
-    [SerializeField] private InventorySlot_UI[] slots;
-
-    protected override void Start()
-    {
-        base.Start();
-
-        if (inventoryHolder != null)
-        {
-            inventorySystem = inventoryHolder.InventorySystem;
-            inventorySystem.OnInventorySlotChanged += UpdateSlot;
-        }
-        else Debug.LogWarning($"No inv assigned to {this.gameObject}");
-    }
-
-    public override void AssignSlot(InventorySystem invToDisplay)
-    {
-        slotDictionary = new Dictionary<InventorySlot_UI, InventorySlot>();
-
-        if (slots.Length != inventorySystem.InventorySize) Debug.Log($"Inventory slots out of sync on {this.gameObject}");
-        for (int i = 0; i < inventorySystem.InventorySize; i++)
-        {
-            slotDictionary.Add(slots[i], inventorySystem.InventorySlots[i]);
-            slots[i].Init(inventorySystem.InventorySlots[i]);
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:227aedcbcffaaf8223008ff728c03d9b6de77ecd9a17b02c705dc2d28a5ca1a6
+size 1088

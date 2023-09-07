@@ -1,17 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Billboard : MonoBehaviour
-{
-
-    // Update is called once per frame
-    void Update()
-    {
-        transform.LookAt(Camera.main.transform);
-        transform.Rotate(0, 180, 0);
-        transform.rotation = Quaternion.Euler(0f, transform.rotation.eulerAngles.y, 0f);
-
-        //float xd = Vector3.Distance(player.position, transform.position);
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:f42f8bdd787e1f7bde2cfe4774d5b5190a0c38bda73e3ccfc05bb1e1e1726b57
+size 445

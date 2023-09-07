@@ -1,22 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.UI;
-using TMPro;
-
-public class PBUI : MonoBehaviour
-{
-    private bool changed;
-    private PlayerController player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        player = GameObject.Find("Player").GetComponent<PlayerController>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:09bfcce38bb875a0813a53879afeb2e75656a8bd4bda51d5351b40261167690b
+size 446
